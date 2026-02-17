@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Спасибо за заявку</title>
 
-<!-- Meta Pixel -->
+<!-- Facebook Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,7 +16,6 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1227343172308663');
-fbq('track', 'Lead');
 </script>
 
 </head>
@@ -26,12 +25,15 @@ fbq('track', 'Lead');
 <h1>Спасибо за заявку!</h1>
 <p>Чтобы завершить регистрацию, нажмите кнопку ниже:</p>
 
-<a href="https://t.me/hrcv_bot?start=fb_form1"
-style="display:inline-block;padding:15px 30px;
-background:#0088cc;color:white;text-decoration:none;
-font-size:18px;border-radius:6px;">
-Перейти в Telegram
+<a href="https://t.me/hrcv_bot?start=fb_form1" id="btnTelegram" style="display:inline-block; padding:15px 30px; background:#0088cc; color:white; text-decoration:none; font-size:18px; border-radius:6px;">
+  Перейти в Telegram
 </a>
+
+<script>
+  document.getElementById('btnTelegram').addEventListener('click', function() {
+    fbq('track', 'Lead');
+  });
+</script>
 
 </body>
 </html>
